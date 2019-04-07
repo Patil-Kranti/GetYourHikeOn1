@@ -285,7 +285,7 @@ public class HomeFragment extends android.support.v4.app.Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 //                        progressBar.setVisibility(View.VISIBLE);
-                        Toast.makeText(context,"Please Check Your Internet Connection And Restart",Toast.LENGTH_LONG).show();
+                        //Toast.makeText(context,"Please Check Your Internet Connection And Restart",Toast.LENGTH_LONG).show();
                     }
                 });
 

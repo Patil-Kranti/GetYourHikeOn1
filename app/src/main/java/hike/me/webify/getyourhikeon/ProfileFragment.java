@@ -110,7 +110,7 @@ public class ProfileFragment extends android.support.v4.app.Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
-                        Toast.makeText(context,"Please Check Your Internet Connection And Restart",Toast.LENGTH_LONG).show();
+                       // Toast.makeText(context,"Please Check Your Internet Connection And Restart",Toast.LENGTH_LONG).show();
                     }
                 });
 //        {
@@ -171,7 +171,7 @@ public class ProfileFragment extends android.support.v4.app.Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(context,"Please Check Your Internet Connection And Restart",Toast.LENGTH_LONG).show();
+                       // Toast.makeText(context,"Please Check Your Internet Connection And Restart",Toast.LENGTH_LONG).show();
                     }
                 });
         //Creating a request queue
