@@ -9,8 +9,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,9 +36,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-
-import hike.me.webify.getyourhikeon.DataModel;
-import hike.me.webify.getyourhikeon.R;
 
 public class HomeFragment extends android.support.v4.app.Fragment {
 
@@ -73,13 +68,13 @@ public class HomeFragment extends android.support.v4.app.Fragment {
         view = inflater.inflate(R.layout.home, container, false);
         context=view.getContext();
         firebaseAuth = FirebaseAuth.getInstance();
-        bookNow=(Button) view.findViewById(R.id.bookNow);
-        bookLater=(Button) view.findViewById(R.id.bookLater);
-        spinner=(Spinner) view.findViewById(R.id.spinner);
+        bookNow = view.findViewById(R.id.bookNow);
+        bookLater = view.findViewById(R.id.bookLater);
+        spinner = view.findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getActivity(), R.array.hikes, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter1);
-       // progressBar=(ProgressBar) view.findViewById(R.id.progress);
+        // progressBar=(ProgressBar) view.findViewById(R.id.progress);
         treks=new ArrayList<String>();
         Bundle args = getArguments();
         if (args  != null && args.containsKey("KUNGSLEDEN")){
@@ -203,10 +198,10 @@ public class HomeFragment extends android.support.v4.app.Fragment {
         });
 
         //recyclerView = (RecyclerView) view.findViewById(R.id.trek_list);
-      //  recyclerView.setHasFixedSize(true);
+        //  recyclerView.setHasFixedSize(true);
         //layoutManager = new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false);
         //recyclerView.setLayoutManager(layoutManager);
-       // recyclerView.setItemAnimator(new DefaultItemAnimator());
+        // recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         data = new ArrayList<DataModel>();
 
@@ -229,7 +224,7 @@ public class HomeFragment extends android.support.v4.app.Fragment {
         });
         //recyclerView.setAdapter(adapter);
 
-        imageView=(ImageView) view.findViewById(R.id.logout);
+        imageView = view.findViewById(R.id.logout);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
